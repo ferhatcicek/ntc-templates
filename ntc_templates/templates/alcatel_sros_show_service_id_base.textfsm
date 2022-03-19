@@ -1,4 +1,5 @@
 Value SERVICE_ID (\d+)
+Value SERVICE_TYPE (\s+)
 Value CUSTOMER_ID (\d+)
 Value DESCRIPTION ([\w|\s]+|\(Not\sSpecified\))
 Value ADMIN_STATE ([uU][pP]|[Dd][oO][wW][nN])
@@ -11,6 +12,7 @@ Start
   ^Customer\sId\s+.\s${CUSTOMER_ID}
   ^MTU\s+:\s${MTU}
   ^Service\sId\s+:\s${SERVICE_ID}
+  ^Service\sType\s+:\s${SERVICE_TYPE}
   ^Description\s+:\s${DESCRIPTION}
   ^Admin\sState\s+:\s${ADMIN_STATE}\s+Oper\sState\s+:\s${OPER_STATE}
   ^SAP\sCount\s+:\s${SAP_COUNT}\s+SDP\sBind\sCount\s+:\s${SDP_COUNT} -> Record
